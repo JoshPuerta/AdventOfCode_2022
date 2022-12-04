@@ -1,0 +1,9 @@
+# VSC
+/.vscode/
+
+# Generated stuff
+*/target/
+*/*.lock
+
+# Inputs
+*/*.in
