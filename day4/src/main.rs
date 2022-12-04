@@ -55,8 +55,8 @@ fn main() {
     let inputs: Vec<String> = file_reader::read_file(&path);
 
     // Part 1
-    println!("Redundant: {:?}", get_redundant_assignments(&inputs, "containment"));
+    println!("Containment: {:?}", get_redundant_assignments(&inputs, "containment"));
     // Part 2
-    println!("Redundant: {:?}", get_redundant_assignments(&inputs, "overlapping"));
+    println!("Overlapping: {:?}", get_redundant_assignments(&inputs, "overlapping"));
 
 }

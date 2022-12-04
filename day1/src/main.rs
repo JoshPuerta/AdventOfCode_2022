@@ -27,7 +27,6 @@ fn main() {
     // Get calories
     let (last_calories,  max_calories) = get_max_calories(&inputs);
 
-    //println!("{:?}", inputs);
     println!("Max calories [1]: {:?}", &max_calories[0]);
     println!("Max calories [3]: {:?}. Sum: {:?}", 
                 &max_calories[0..3], &max_calories[0..3].iter().sum::<u32>());
