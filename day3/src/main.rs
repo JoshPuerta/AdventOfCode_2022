@@ -16,10 +16,6 @@ fn char2n_map(c: &char) -> u8 {
 }
 
 fn iter_intersection(sets: &[HashSet<char>]) -> HashSet<char> {
-    if sets.is_empty() { 
-        return HashSet::new(); 
-    }
-
     let mut result = sets[0].clone();
 
     for set in &sets[1..] {
@@ -28,7 +24,7 @@ fn iter_intersection(sets: &[HashSet<char>]) -> HashSet<char> {
     result
 }
 
-fn priority_finder(pload: &Vec<HashSet<char>>) -> u32 {
+fn priority_finder(pload: &Vec<HashSet<char>>) -> u8 {
 
     let isect: HashSet<char> = iter_intersection(&pload);
 
@@ -36,7 +32,7 @@ fn priority_finder(pload: &Vec<HashSet<char>>) -> u32 {
         .iter()
         .map(|c| { char2n_map(c) })
         .collect();
-    isec_num.pop().unwrap() as u32
+    isec_num.pop().unwrap()
 }
 
 fn priority_sum_perline(rucksacks: &[String]) -> u32 {
@@ -65,7 +61,7 @@ fn priority_sum_nlines(rucksacks: &[String], n: u32) -> u32 {
                 x if x == n - 1  => { 
                     let set: HashSet<char> = s.chars().collect();
                     payload.push(set);
-                    delta = priority_finder(&payload);
+                    delta = priority_finder(&payload) as u32;
                     payload.clear();
                 }
                 _ => { 

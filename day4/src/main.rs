@@ -39,7 +39,7 @@ fn get_redundant_assignments(assignments: &[String], policy_id: &str) -> u32 {
         .fold(0u32, |acc, section| {
             let assignments = extract_ranges(&section);
             match policy(&assignments) {
-                true => { acc + 1}
+                true => { acc + 1 }
                 false => { acc }
             }
         });
