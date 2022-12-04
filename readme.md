@@ -2,4 +2,15 @@
 
 The plan is to learn.
 
-The idea is <bin> <file>. I was lazy and didn´t include the inputs :disappointed:
+Pass the input as first argument
+
+```$> [EXEC] [FILE]```
+
+e.g.
+
+```
+$> cd ${repo-root}/day1
+$> cargo run inputs.txt
+```
+
+ I was lazy and didn´t include the inputs :disappointed:
